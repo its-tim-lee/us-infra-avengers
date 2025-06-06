@@ -39,3 +39,15 @@ Thank you for fostering innovation against critical national security challenges
 
 
 
+## Development
+
+#### Prepare the development environment
+Run each line in your terminal:
+```bash
+conda env create -f environment.yml
+conda activate aquaman
+conda install -c conda-forge pandas scikit-learn pyod joblib
+```
+
+#### Run each notebook
+You should run the notebooks in order, but you may simply take a look at the existing running results from each one.
