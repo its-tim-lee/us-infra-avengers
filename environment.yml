@@ -1,0 +1,12 @@
+name: swat
+channels:
+  - conda-forge # Add conda-forge before defaults in the channels list. This ensures that packages are installed from conda-forge when available, as it often has more up-to-date packages.
+  - defaults
+dependencies:
+  - python=3.10  # Ensure the Python version is specified
+  - pandas
+  - scikit-learn
+  - pyod  # Added for PyOD library (Isolation Forest, etc.)
+  - joblib  # Added for model persistence (saving/loading trained models)
+  - pip:
+    - "crewai[tools]" # Added CrewAI and its tools
