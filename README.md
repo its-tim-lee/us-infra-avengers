@@ -48,14 +48,17 @@ Thank you for fostering innovation against critical national security challenges
 
 ##### 2. Prepare data
   * Create a folder data/raw/ in the project root
-  * 1 ) Download [the data](https://drive.google.com/file/d/15tBLNlnWbzdTLn59sD-XXIabbEhKii9Y/view?usp=sharing) and 2 ) Unzip into that folder
+  * Download [the data](https://drive.google.com/file/d/15tBLNlnWbzdTLn59sD-XXIabbEhKii9Y/view?usp=sharing)
+  * Unzip the data and pull the content to the folder
+  * Now you should have the files same as below structure:
+    * data/raw/SWaT_Dataset_Attack_v0.csv
+    * data/raw/SWaT_Dataset_Normal_v1.csv
 
 ##### 3. Run the commands
 
   ```bash
   conda env create -f environment.yml
   conda activate aquaman
-  conda install -c conda-forge pandas scikit-learn pyod joblib
   ```
 
 #### Run each notebook
@@ -63,4 +66,6 @@ Thank you for fostering innovation against critical national security challenges
 2. notebooks/02_model_training: use the prcoessed data (ie., data/processed/) to train the model
 3. notebooks/03_crewai_scada_triage: use the trained model (ie., models/) to detect anomaly behaviors.
 
-> You can simply run notebooks/03_crewai_scada_triage to see the result since we've alreay prepared the trained model in models/
+Note:
+- When running a notebook, you should "Select Kernel" to choose "aquaman (Python 3.10.18)" on the Jupyter notebook UI, which is the dependent version listed in environment.yml.
+- You may simply just run the first and the third notebooks since the model has been trained and prepared in models/
