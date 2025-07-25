@@ -42,12 +42,25 @@ Thank you for fostering innovation against critical national security challenges
 ## Development
 
 #### Prepare the development environment
-Run each line in your terminal:
-```bash
-conda env create -f environment.yml
-conda activate aquaman
-conda install -c conda-forge pandas scikit-learn pyod joblib
-```
+##### 1. Use .env
+  - Rename provided **.env.example** to  **.env**
+  - Proivde the API keys in the file
+
+##### 2. Prepare data
+  * Create a folder data/raw/ in the project root
+  * 1 ) Download [the data](https://drive.google.com/file/d/15tBLNlnWbzdTLn59sD-XXIabbEhKii9Y/view?usp=sharing) and 2 ) Unzip into that folder
+
+##### 3. Run the commands
+
+  ```bash
+  conda env create -f environment.yml
+  conda activate aquaman
+  conda install -c conda-forge pandas scikit-learn pyod joblib
+  ```
 
 #### Run each notebook
-You should run the notebooks in order, but you may simply take a look at the existing running results from each one.
+1. notebooks/01_data_exploration: process the raw data, which will generate the processed data under data/processed/
+2. notebooks/02_model_training: use the prcoessed data (ie., data/processed/) to train the model
+3. notebooks/03_crewai_scada_triage: use the trained model (ie., models/) to detect anomaly behaviors.
+
+> You can simply run notebooks/03_crewai_scada_triage to see the result since we've alreay prepared the trained model in models/
