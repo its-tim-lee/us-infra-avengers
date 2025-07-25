@@ -47,7 +47,7 @@ Thank you for fostering innovation against critical national security challenges
   - Proivde the API keys in the file
 
 ##### 2. Prepare data
-  * Create a folder data/raw/ in the project root
+  * Create a folder data/raw/ and data/processed/ in the project root
   * Download [the data](https://drive.google.com/file/d/15tBLNlnWbzdTLn59sD-XXIabbEhKii9Y/view?usp=sharing)
   * Unzip the data and pull the content to the folder
   * Now you should have the files same as below structure:
