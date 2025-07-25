@@ -9,4 +9,6 @@ dependencies:
   - pyod  # Added for PyOD library (Isolation Forest, etc.)
   - joblib  # Added for model persistence (saving/loading trained models)
   - pip:
-    - "crewai[tools]" # Added CrewAI and its tools
+    - "crewai[tools]==0.140.0"  # Pinned to stable version to avoid LLM response issues
+    - "langchain-anthropic==0.3.15"  # Stable version for Anthropic Claude integration
+    - "python-dotenv"  # Added for .env file loading
